@@ -4,7 +4,7 @@ var path = require('path');
 var user = require('../model/user');
 var multer =  require('multer');
 var data = require('../model/data');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcrypt')
 const fs = require('fs')
 /* GET home page. */
 
