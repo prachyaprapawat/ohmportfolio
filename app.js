@@ -31,11 +31,9 @@ app.use(
 )
 app.use('/', indexRouter);
 
-const port = process.env.PORT || 8000;
-app.listen(port, () => {
-  console.log("App is running on port " + port);
-});
-
+app.listen(8080,()=>{
+  console.log('PORT : 8080');
+})
 // catch 404 and forward to error handler
 
 // error handler
