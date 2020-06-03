@@ -13,7 +13,7 @@ var app = express();
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-app.set('views', path.join(__dirname+'/views/'));
+app.set('views', path.join(__dirname + '/views/'));
 
 
 
@@ -22,13 +22,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(
-  session({
-    secret: 'my_super_secret',
-    resave: false,
-    saveUninitialized: false
-  })
-)
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true,
+}))
 app.use('/', indexRouter);
 
 const port = process.env.PORT || 8000;
